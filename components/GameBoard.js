@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 
 
-const GameBoard = (props) => {
+function GameBoard(props)  {
     const [timeLeft, setTimeLeft] = useState(60)
     const [gameOver, setGameOver] = useState(false)
 
@@ -30,18 +30,18 @@ const GameBoard = (props) => {
         <Text>You have {timeLeft} seconds left</Text>
         <Text>{props.score} Moles whacked!</Text>
         <View style={styles.game}>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
+        <Square gameOver={gameOver}/>
+        <Square gameOver={gameOver}/>        
+        <Square gameOver={gameOver}/>        
+        <Square gameOver={gameOver}/>  
+        <Square gameOver={gameOver}/>  
+        <Square gameOver={gameOver}/>          
+        <Square gameOver={gameOver}/>  
+        <Square gameOver={gameOver}/>  
+        <Square gameOver={gameOver}/>  
+        <Square gameOver={gameOver}/>  
+        <Square gameOver={gameOver}/>  
+        <Square gameOver={gameOver}/>  
         </View>
       </ImageBackground>
 
