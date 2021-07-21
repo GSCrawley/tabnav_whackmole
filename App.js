@@ -1,18 +1,20 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
-import Welcome from './Welcome';
-import GameBoard from './GameBoard';
+import Welcome from './components/Welcome';
+import GameBoard from './components/GameBoard';
 import { getFocusedRouteNameFromRoute, NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Provider } from 'react-redux';
 import store from './redux/store'
 
-import { ionIcon } from  'react-native-vector-icons';
+import { Ionicons } from  'react-native-vector-icons';
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
+    <Provider store={store}>
+
     <NavigationContainer>
     <Tab.Navigator 
       screenOptions={({ route }) => ({
@@ -31,13 +33,19 @@ export default function App() {
         },
       })}
 >
-    <Provider store={store}>
 
-    </Provider>
+    
+        <Tab.Screen name="Home" component={Welcome} />
+        <Tab.Screen name="Game" component={GameBoard} />
+
+   
     
  </Tab.Navigator>
  </NavigationContainer>
+ 
+  </Provider>
   );
+ 
 }
 
 

@@ -7,13 +7,17 @@ import { connect } from 'react-redux'
 
 const GameBoard = (props) => {
     const [timeLeft, setTimeLeft] = useState(60)
+    const [gameOver, setGameOver] = useState(false)
 
     useEffect(() => {
-        if(!timeLeft) return
+        if(!timeLeft)  {
+            setGameOver(true)
+            return
+        }
         const timerId = setInterval(() => {
             //happens every 1000ms
             setTimeLeft(timeLeft -1)
-        },1000)
+        },800)
         return () => clearInterval(timerId)
     }, [timeLeft])
     
@@ -56,7 +60,8 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       flexWrap: 'wrap',
       width: 300,
-      paddingTop: 20
+      paddingTop: 20,
+      marginBottom:20
     },
     header: {
         fontWeight: 'bold',
