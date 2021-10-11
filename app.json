@@ -4,9 +4,9 @@
     "slug": "whackamole",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/GinaHole.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/mole.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,7 +21,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/GinaHole.png",
         "backgroundColor": "#FFFFFF"
       }
     },

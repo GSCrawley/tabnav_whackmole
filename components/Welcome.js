@@ -10,7 +10,7 @@ export default function Welcome() {
       >
     <Text style={styles.header}>Welcome </Text>
     <Text style={styles.header}> To </Text>
-    <Text style={styles.header}> Whack-A-Mole! </Text>
+    <Text style={styles.header}> Whack-A-Troll! </Text>
       </ImageBackground>
     )
 }

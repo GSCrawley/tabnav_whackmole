@@ -26,7 +26,9 @@ function GameBoard(props)  {
         style={styles.container}
         source={require('../assets/background.png')}
         >
-        <Text style={styles.header}>Gid's Whackamole Game!</Text>
+        <Text style={styles.header}>Go on, whack him!</Text>
+        <Text style={styles.header}>(you know you want to)</Text>
+
         <Text>You have {timeLeft} seconds left</Text>
         <Text>{props.score} Moles whacked!</Text>
         <View style={styles.game}>
@@ -65,8 +67,9 @@ const styles = StyleSheet.create({
     },
     header: {
         fontWeight: 'bold',
+        fontSize: 14,
         marginBottom: 10,
-        marginTop: 100,
+        // marginTop: 20,
         color: 'purple'
 
     }
